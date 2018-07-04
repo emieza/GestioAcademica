@@ -1,0 +1,14 @@
+Gestió Acadèmica de centre INS
+
+User Story
+
+1)
+Como Profesor
+necesito pasar listado alumnos
+para controlar asistencia
+
+2)
+Como Alumno
+necesito validarme en el sistema
+para confirmar mi presencia en clase
+
