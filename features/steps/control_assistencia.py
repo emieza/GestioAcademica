@@ -31,4 +31,3 @@ def step_impl(context,estat):
 @then("senyal d'alarma per fals positiu")
 def step_impl(context):
     pass
-
