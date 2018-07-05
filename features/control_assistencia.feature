@@ -34,3 +34,8 @@ Feature: controlar assistència
     When profe canvia estat alumne a falta
     Then senyal d'alarma per fals positiu
 
+  Scenario: profe es loga
+    Given web en marxa
+    When profe es loga amb "bddtest" i "testbdd123"
+    Then usuari "bddtest" logat
+
