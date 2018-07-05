@@ -1,8 +1,10 @@
 
+# Interesting SCRUM tags: @skip @wip (work in process) @slow
 
 Feature: controlar assistència
 "Control d'assistència a classe"
 
+  @skip
   Scenario Outline: mostrar estat alumne
     Given alumne en estat <estat>
       And profe logat
@@ -14,7 +16,7 @@ Feature: controlar assistència
     | present |
     | falta   |
 
-
+  @wip
   Scenario Outline: canviar estat alumne
     Given alumne en estat <estat_inicial>
       And profe logat
@@ -26,6 +28,7 @@ Feature: controlar assistència
     | present       | falta       |
     | falta         | present     |
 
+  @slow
   Scenario: alarma fals positiu
     Given alumne en estat present
     When profe canvia estat alumne a falta

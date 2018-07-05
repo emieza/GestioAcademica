@@ -1,6 +1,6 @@
 
 from behave import *
-from app import *
+from models import *
 
 ALUMNE_TEST_ID = 2233
 
