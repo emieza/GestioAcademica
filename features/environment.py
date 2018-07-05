@@ -10,16 +10,18 @@ from selenium import webdriver
 
 def before_all(context):
     print("Starting webserver...")
-    #context.proc = Process(target=flask_app.run)
-    #context.proc.start()
-    #sleep(1)
+    context.proc = Process(target=flask_app.run)
+    context.proc.start()
+    sleep(1)
     print("Test thread started...")
     context.firefox = webdriver.Firefox()
 
 def after_all(context):
-    #context.proc.terminate()
-    #context.proc.join()
+    # tanquem firefox de selenium
     context.firefox.quit()
+    # tanquem webserver
+    context.proc.terminate()
+    context.proc.join()
     print("...terminated!")
 
 

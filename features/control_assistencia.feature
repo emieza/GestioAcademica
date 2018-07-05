@@ -4,7 +4,7 @@
 Feature: controlar assistència
 "Control d'assistència a classe"
 
-  @skip
+  @basic
   Scenario Outline: mostrar estat alumne
     Given alumne en estat <estat>
       And profe logat
@@ -34,6 +34,7 @@ Feature: controlar assistència
     When profe canvia estat alumne a falta
     Then senyal d'alarma per fals positiu
 
+  @login
   Scenario: profe es loga
     Given web en marxa
     When profe es loga amb "bddtest" i "testbdd123"

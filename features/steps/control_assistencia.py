@@ -16,12 +16,16 @@ def step_impl(context):
 
 @when("profe llista alumnes")
 def step_impl(context):
-    pass
+    context.firefox.get("http://localhost:5000/llistat_alumnes")
+    titol = context.firefox.find_element_by_tag_name("h2")
+    assert titol.text == "Llistat d'alumnes"
 
 @then("es mostra alumne en estat {estat}")
 def step_impl(context,estat):
-    print(estat,context.alumne.estat)
-    assert context.alumne.estat == estat
+    context.firefox.get("http://localhost:5000/llistat_alumnes")
+
+    #print(estat,context.alumne.estat)
+    #assert context.alumne.estat == estat
 
 
 @when("profe canvia estat alumne a {estat}")
